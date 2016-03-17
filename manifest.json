@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    
+    "name": "Eurosport Player Remote",
+    "description": "Simple extension to allow controlling Eurosport Player using an IR remote.",
+    "version": "1.0",
+    
+    "content_scripts": [
+        {
+            "matches": ["http://www.eurosportplayer.co.uk/live.shtml",
+            "https://www.google.se/*"],
+            "js": ["remote.js"]
+        }
+    ]
+}
