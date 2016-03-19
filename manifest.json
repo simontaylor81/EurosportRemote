@@ -7,8 +7,7 @@
     
     "content_scripts": [
         {
-            "matches": ["http://www.eurosportplayer.co.uk/live.shtml",
-            "https://www.google.se/*"],
+            "matches": ["http://www.eurosportplayer.co.uk/live.shtml"],
             "js": ["remote.js"]
         }
     ]
