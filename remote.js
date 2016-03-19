@@ -28,7 +28,11 @@
 
         if (event.keyCode === fullscreenKey.charCodeAt(0)) {
             toggleFullscreen();
-        }        
+        }
+        
+        if (event.keyCode >= '1'.charCodeAt(0) && event.keyCode <= '9'.charCodeAt(0)) {
+            selectChannel(event.keyCode - '1'.charCodeAt(0));
+        }
     }
     
     function onPlayPause() {
@@ -37,5 +41,12 @@
     
     function toggleFullscreen() {
         fullscreenButton.click();
+    }
+    
+    function selectChannel(channel) {
+        var channelElements = document.querySelectorAll('#live-right-controls .channel');
+        if (channel >= 0 && channel < channelElements.length) {
+            channelElements[channel].click();
+        }
     }
 })();
